@@ -1,7 +1,7 @@
 jobs:
   include:
     - stage: frontend
-      if: branch = frontend OR branch = master
+      if: branch = frontend
       language: node_js
       node_js:
         - '13'
@@ -14,11 +14,12 @@ jobs:
         - ng build
 
     - stage: backend
-      if: branch = backend OR branch = master
+      if: branch = backend
       language: Java
       jdk:
         - oraclejdk11
     - stage: deploy
+      language: node_js
       install:
         - npm install
       script:
