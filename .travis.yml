@@ -22,13 +22,8 @@ jobs:
       language: node_js
       node_js:
         - '13'
-      before_install:
-        - cd frontend
-      install:
-        - npm install
       script:
-        - npm update
-        - ng build
+        - mvn install
       skip_cleanup: true
       provider: heroku
       api_key:
