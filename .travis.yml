@@ -20,6 +20,10 @@ jobs:
         - oraclejdk11
     - stage: deploy
       language: node_js
+      node_js:
+        - '13'
+      before_install:
+        - cd frontend
       install:
         - npm install
       script:
