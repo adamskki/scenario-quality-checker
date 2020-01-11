@@ -18,3 +18,10 @@ jobs:
       language: Java
       jdk:
         - oraclejdk11
+    - stage: deploy
+      provider: heroku
+      api_key:
+        secure: PEndqu72AKwGoinuOWIz6q2KSggl7H2sKN5LmRCrrexmBczLr7pMJEkXWf/ERAviB4B2y+7kwUhKOFu1E5u80XcXxGHpBBN5jfc4jwIYnXuQETavg4EUp6MqLWVZeL1dVDTYN9onMBc6Gx/uZinif1NC+A3G1fs/fiLzpWwnZAyOTkgHQfqXHeG5qkPreXLdXlb0S4YUcSKKjl5G6qRt7cDQfAEJdOr+/TWmI6f1qwa1lpvdafrUF3xeVPVcurnVrFFIZn83PjMDjmtMHtVONLEYJboZKqB+fPNKtYxjtc2N5EeX0Lqde1G55opIdZ91R0GWdLZcLRgK15oZ4yZbgoJGecU3pU/72w5D5pLQ4xlJrq3uUGnhs+6n0HtOTwSdTGLIPl/R8ATmDTDI0pQVKqiD5n624iwbfXEi1+O21hhcPLNAeOlrZauf+lF5GVMoEP/nYRphJ0cVfLtBLHR8ytlbsV8l4GkJ18/pZ683rqJA2F5oynlLPss1QO8wsPLH8PShiTI4sdjwOoogtisBs8jZu82VzMsDWdqyrVeTlO4FB+vUVqLNeiIXLXKtl/3ISm6TxpzVG7EEEkeQvZMMG42iUvB9Ag6q8yE39oHcFlLW5DuySxXZpLlNf0MWa+fpOEe5dKwRSzqLLkE8oqsF4i50Yemap1oQDVQI9lg5tbg=
+      app: scenario-quality-checker
+      on:
+        repo: adamskki/scenario-quality-checker
